@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="file_link_widget" class="MageSuite\FileUpload\Widget\FileLink">
+        <label translate="true">File URL</label>
+        <description translate="true">Returns URL to file uploaded using media library</description>
+        <parameters>
+            <parameter name="file_url" xsi:type="block" required="true" visible="true" sort_order="10">
+                <label translate="true">File</label>
+                <block class="MageSuite\FileUpload\Block\Adminhtml\Widget\FileChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose file...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

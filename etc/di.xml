@@ -5,30 +5,30 @@
         <arguments>
             <argument name="extensions" xsi:type="array">
                 <item name="allowed" xsi:type="array">
-                    <item name="pdf" xsi:type="number">1</item>
-                    <item name="doc" xsi:type="number">1</item>
-                    <item name="docm" xsi:type="number">1</item>
-                    <item name="docx" xsi:type="number">1</item>
-                    <item name="csv" xsi:type="number">1</item>
-                    <item name="xml" xsi:type="number">1</item>
-                    <item name="xls" xsi:type="number">1</item>
-                    <item name="xlsx" xsi:type="number">1</item>
-                    <item name="zip" xsi:type="number">1</item>
-                    <item name="tar" xsi:type="number">1</item>
-                    <item name="rar" xsi:type="number">1</item>
+                    <item name="pdf" xsi:type="string">application/pdf</item>
+                    <item name="doc" xsi:type="string">application/msword</item>
+                    <item name="docm" xsi:type="string">application/vnd.ms-word.document.macroEnabled.12</item>
+                    <item name="docx" xsi:type="string">application/vnd.openxmlformats-officedocument.wordprocessingml.document</item>
+                    <item name="csv" xsi:type="string">text/plain</item>
+                    <item name="xml" xsi:type="string">application/xml</item>
+                    <item name="xls" xsi:type="string">application/vnd.ms-office</item>
+                    <item name="xlsx" xsi:type="string">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</item>
+                    <item name="zip" xsi:type="string">application/zip</item>
+                    <item name="tar" xsi:type="string">application/x-tar</item>
+                    <item name="rar" xsi:type="string">application/x-rar</item>
                 </item>
                 <item name="media_allowed" xsi:type="array">
-                    <item name="pdf" xsi:type="number">1</item>
-                    <item name="doc" xsi:type="number">1</item>
-                    <item name="docm" xsi:type="number">1</item>
-                    <item name="docx" xsi:type="number">1</item>
-                    <item name="csv" xsi:type="number">1</item>
-                    <item name="xml" xsi:type="number">1</item>
-                    <item name="xls" xsi:type="number">1</item>
-                    <item name="xlsx" xsi:type="number">1</item>
-                    <item name="zip" xsi:type="number">1</item>
-                    <item name="tar" xsi:type="number">1</item>
-                    <item name="rar" xsi:type="number">1</item>
+                    <item name="pdf" xsi:type="string">application/pdf</item>
+                    <item name="doc" xsi:type="string">application/msword</item>
+                    <item name="docm" xsi:type="string">application/vnd.ms-word.document.macroEnabled.12</item>
+                    <item name="docx" xsi:type="string">application/vnd.openxmlformats-officedocument.wordprocessingml.document</item>
+                    <item name="csv" xsi:type="string">text/plain</item>
+                    <item name="xml" xsi:type="string">application/xml</item>
+                    <item name="xls" xsi:type="string">application/vnd.ms-office</item>
+                    <item name="xlsx" xsi:type="string">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</item>
+                    <item name="zip" xsi:type="string">application/zip</item>
+                    <item name="tar" xsi:type="string">application/x-tar</item>
+                    <item name="rar" xsi:type="string">application/x-rar</item>
                 </item>
             </argument>
         </arguments>

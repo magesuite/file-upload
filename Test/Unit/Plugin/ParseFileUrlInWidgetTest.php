@@ -21,7 +21,7 @@ class ParseFileUrlInWidgetTest extends \PHPUnit\Framework\TestCase
 
     const FILE_LINK_WIDGET_CLASS = 'MageSuite\FileUpload\Widget\FileLink';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->objectManager = \Magento\TestFramework\ObjectManager::getInstance();
 

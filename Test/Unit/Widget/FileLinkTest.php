@@ -14,7 +14,7 @@ class FileLinkTest extends \PHPUnit\Framework\TestCase
      */
     protected $widget;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->objectManager = \Magento\TestFramework\ObjectManager::getInstance();
 

@@ -27,7 +27,8 @@ class FileLinkTest extends \PHPUnit\Framework\TestCase
 
         $result = $this->widget->toHtml();
 
-        $this->assertEquals('http://localhost/pub/media/wysiwyg/file.pdf', $result);
+        $result = str_replace('pub/', '', $result);
+        $this->assertEquals('http://localhost/media/wysiwyg/file.pdf', $result);
     }
 
     public function testItReturnsEmptyStringWhenUrlIsNotPassed()

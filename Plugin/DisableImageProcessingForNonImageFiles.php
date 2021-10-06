@@ -21,6 +21,7 @@ class DisableImageProcessingForNonImageFiles
         'zip',
         'tar',
         'rar',
+        'mp4'
     ];
 
     public function aroundOpen(\Magento\Framework\Image\Adapter\Gd2 $subject, callable $proceed, $filename)

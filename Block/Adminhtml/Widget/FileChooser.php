@@ -58,7 +58,8 @@ class FileChooser extends \Magento\Backend\Block\Template
             $input->addClass('required-entry');
         }
 
-        $element->setData('after_element_html', $input->getElementHtml() . $chooser->toHtml());
+        $element->setData('after_element_html', $input->getElementHtml() . $chooser->toHtml()
+            . "<script>require(['mage/adminhtml/browser']);</script>");
 
         return $element;
     }

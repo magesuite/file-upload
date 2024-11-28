@@ -36,6 +36,14 @@
         </arguments>
     </type>
 
+    <type name="Magento\MediaGalleryIntegration\Plugin\SaveImageInformation">
+        <arguments>
+            <argument name="imageExtensions" xsi:type="array">
+                <item name="svg" xsi:type="string">svg</item>
+            </argument>
+        </arguments>
+    </type>
+
     <type name="Magento\Widget\Model\Widget">
         <plugin name="parse_document_url_in_widget" type="MageSuite\FileUpload\Plugin\ParseFileUrlInWidget" sortOrder="10" />
     </type>

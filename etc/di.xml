@@ -36,10 +36,19 @@
         </arguments>
     </type>
 
+    <type name="Magento\MediaGallerySynchronization\Model\FetchMediaStorageFileBatches">
+        <arguments>
+            <argument name="fileExtensions" xsi:type="array">
+                <item name="mp4" xsi:type="string">mp4</item>
+            </argument>
+        </arguments>
+    </type>
+
     <type name="Magento\MediaGalleryIntegration\Plugin\SaveImageInformation">
         <arguments>
             <argument name="imageExtensions" xsi:type="array">
                 <item name="svg" xsi:type="string">svg</item>
+                <item name="mp4" xsi:type="string">mp4</item>
             </argument>
         </arguments>
     </type>
@@ -50,5 +59,9 @@
 
     <type name="Magento\Framework\Image\Adapter\Gd2">
         <plugin name="disable_image_processing_for_non_image_files" type="MageSuite\FileUpload\Plugin\DisableImageProcessingForNonImageFiles" sortOrder="10" />
+    </type>
+
+    <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
+        <plugin name="set_file_uploaded_type_to_null" type="MageSuite\FileUpload\Plugin\Cms\Model\Wysiwyg\Images\Storage\UnsetUploadedFileType"/>
     </type>
 </config>

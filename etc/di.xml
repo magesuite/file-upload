@@ -39,6 +39,28 @@
                 </item>
             </argument>
         </arguments>
+        <plugin name="set_file_uploaded_type_to_null" type="MageSuite\FileUpload\Plugin\Cms\Model\Wysiwyg\Images\Storage\UnsetUploadedFileType"/>
+    </type>
+
+    <type name="MageSuite\FileUpload\Plugin\Magento\Framework\Image\Adapter\AbstractAdapter\DisableImageProcessingForNonImageFiles">
+        <arguments>
+            <argument name="nonImageFilesExtensions" xsi:type="array">
+                <item name="pdf" xsi:type="string">pdf</item>
+                <item name="doc" xsi:type="string">doc</item>
+                <item name="docm" xsi:type="string">docm</item>
+                <item name="docx" xsi:type="string">docx</item>
+                <item name="csv" xsi:type="string">csv</item>
+                <item name="xml" xsi:type="string">xml</item>
+                <item name="xls" xsi:type="string">xls</item>
+                <item name="xlsx" xsi:type="string">xlsx</item>
+                <item name="zip" xsi:type="string">zip</item>
+                <item name="tar" xsi:type="string">tar</item>
+                <item name="rar" xsi:type="string">rar</item>
+                <item name="mp4" xsi:type="string">mp4</item>
+                <item name="webp" xsi:type="string">webp</item>
+                <item name="webm" xsi:type="string">webm</item>
+            </argument>
+        </arguments>
     </type>
 
     <type name="Magento\MediaGallerySynchronization\Model\FetchMediaStorageFileBatches">
@@ -66,11 +88,8 @@
         <plugin name="parse_document_url_in_widget" type="MageSuite\FileUpload\Plugin\ParseFileUrlInWidget" sortOrder="10"/>
     </type>
 
-    <type name="Magento\Framework\Image\Adapter\Gd2">
-        <plugin name="disable_image_processing_for_non_image_files" type="MageSuite\FileUpload\Plugin\DisableImageProcessingForNonImageFiles" sortOrder="10"/>
-    </type>
-
-    <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
-        <plugin name="set_file_uploaded_type_to_null" type="MageSuite\FileUpload\Plugin\Cms\Model\Wysiwyg\Images\Storage\UnsetUploadedFileType"/>
+    <type name="Magento\Framework\Image\Adapter\AbstractAdapter">
+        <plugin name="disable_image_processing_for_non_image_files" sortOrder="10"
+                type="MageSuite\FileUpload\Plugin\Magento\Framework\Image\Adapter\AbstractAdapter\DisableImageProcessingForNonImageFiles"/>
     </type>
 </config>

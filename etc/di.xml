@@ -92,4 +92,12 @@
         <plugin name="disable_image_processing_for_non_image_files" sortOrder="10"
                 type="MageSuite\FileUpload\Plugin\Magento\Framework\Image\Adapter\AbstractAdapter\DisableImageProcessingForNonImageFiles"/>
     </type>
+
+    <type name="Magento\MediaGalleryIntegration\Plugin\SaveImageInformation">
+        <arguments>
+            <argument name="imageExtensions" xsi:type="array">
+                <item name="pdf" xsi:type="string">pdf</item>
+            </argument>
+        </arguments>
+    </type>
 </config>

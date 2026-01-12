@@ -2,25 +2,36 @@
 
 namespace MageSuite\FileUpload\Block\Adminhtml\Widget;
 
+use Magento\Ui\Component\Form\Element\DataType\Media\OpenDialogUrl;
+use Magento\Cms\Model\Wysiwyg\Config;
+
 class FileChooser extends \Magento\Backend\Block\Template
 {
     /**
      * @var \Magento\Framework\Data\Form\Element\Factory
      */
     protected $_elementFactory;
+    
+    /**
+     * @var OpednDialogUrl
+     */
+    protected $openDialogUrl;
 
     /**
      * @param \Magento\Backend\Block\Template\Context $context
      * @param \Magento\Framework\Data\Form\Element\Factory $elementFactory
+     * @param OpenDialogUrl $openDialogUrl
      * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Framework\Data\Form\Element\Factory $elementFactory,
+        OpenDialogUrl $openDialogUrl,
         array $data = []
     )
     {
         $this->_elementFactory = $elementFactory;
+        $this->openDialogUrl = $openDialogUrl;
 
         parent::__construct($context, $data);
     }
@@ -34,9 +45,9 @@ class FileChooser extends \Magento\Backend\Block\Template
     public function prepareElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element)
     {
         $config = $this->_getData('config');
-
+        
         $sourceUrl = $this->getUrl(
-            'cms/wysiwyg_images/index',
+            $this->openDialogUrl->get(),
             ['target_element_id' => $element->getId(), 'type' => 'file']
         );
 
